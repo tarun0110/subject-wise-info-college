@@ -1,0 +1,9 @@
+<h1>{{ subjects.subjects_text }}</h1>
+<ul>
+{% for syllabus in subjects.syllabus_set.all %}
+    <li>syllabus :{{ syllabus.syllabus_text }}</li>
+{% endfor %}
+{% for topics_today in subjects.topics_today_set.all %}
+    <li>topics covered on date {{topics_today.date_today}}:{{topics_today.topics_today_text}} </li>
+{% endfor %}    
+</ul>
